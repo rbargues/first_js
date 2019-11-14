@@ -9,7 +9,12 @@ class to_do_list {
 		this.tasks = this.tasks.filter(function(item){return item != task})
 	}
 }
-var to_do_list = []
+
+const make_list = (list) => {
+	var task_to_add = document.getElementById("item")
+	list.push(task_to_add)
+	var to_do = new to_do_list(list)
+}
 
 
 function render_list(arr){
@@ -29,13 +34,3 @@ while (container.hasChildNodes()) {
 });
 };
 
-function add_task(){
-	var task = document.getElementById("item").value;
-	to_do_list.push(task)
-	render_list(to_do_list)
-};
-
-function remove_task(task){
-to_do_list = to_do_list.filter(function(item){return item != task})
-      render_list(to_do_list)
-};
