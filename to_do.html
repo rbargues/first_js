@@ -22,7 +22,9 @@
 		this.tasks.forEach(function(item){
 			var task_item = document.createElement("button");
 				task_item.innerHTML	= "done";
-				task_item.onclick = this.remove_task(item);
+				console.log('this is task item plz:',task_item);
+				task_item.addEventListener("click",() => console.log('python never hurt me like this'));
+				//task_item.onclick = this.remove_task(item);
 			var task_label = document.createElement("div");
 					task_label.innerHTML = item;
 			container.appendChild(task_label);
@@ -34,21 +36,23 @@
 }
 
 const make_list = (list) => {
+
 	var task_to_add = document.getElementById("item");
 	list.push(task_to_add);
+	console.log('oi m8 why this',list);
 	var to_do = new to_do_list(list);
 	to_do.render_list()
 
 }
 var list = [];
-document.getElementById("button").onclick = make_list(list);
+//document.getElementById("button").click() = make_list(list);
 
 </script>
 
 </head>
 <body>
     <input type="text" id="item" name="task" value=''>Item to add</input>
-	<input id="button" type="button" value="Add Task" onclick="make_list(list);" />    
+	<button id="button"  onclick="make_list(list);">Add Task</button>    
 	<div id='container'>
     </div>	
 </body>
