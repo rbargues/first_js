@@ -35,5 +35,5 @@ const make_list = (list) => {
 	to_do.render_list()
 
 }
-
+var list = [];
 document.getElementById("button").onclick = make_list(list);
