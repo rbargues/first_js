@@ -1,0 +1,35 @@
+<!DOCType HTML>
+<html>
+<head>
+<style type="text/css">
+	<div class='flex-container'>
+	.flex-container {display: flex;
+  					flex-wrap: nowrap;
+  					background-color: DodgerBlue;
+  					align-content: row;
+					}
+	.flex-container > button {
+		  background-color: #f1f1f1;
+		  width: 10px;
+		  margin: 0px;
+		  text-align: center;
+		  line-height: 10px;
+		  font-size: 10px;
+		}
+	.flex-container > div {
+		font-size: 10px;
+
+	}
+	</div>
+</style>	
+<script src="to_do_list.js"></script> 
+</head>
+<body>
+    <input type="text" id="item" name="task" value=''>Item to add
+    <button onclick="add_task()">Add Task</button> 
+    <div class = 'flex-container' id='container'>
+
+    </div>	
+</body>
+
+</html>
